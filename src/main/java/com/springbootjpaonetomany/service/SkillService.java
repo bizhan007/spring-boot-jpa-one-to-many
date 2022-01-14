@@ -12,4 +12,6 @@ public interface SkillService {
     Skill updateSkill(Skill skill);
     void deleteSkillById(Long id);
 
+    List<Skill> getSkillsByPersonId(Long personId);
+
 }

@@ -41,4 +41,9 @@ public class SkillServiceImpl implements SkillService {
         skillRepository.deleteSkillById(id);
     }
 
+    @Override
+    public List<Skill> getSkillsByPersonId(Long personId) {
+        return skillRepository.getSkillsByPersonId(personId);
+    }
+
 }

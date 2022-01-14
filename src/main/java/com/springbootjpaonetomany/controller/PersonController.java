@@ -60,12 +60,12 @@ public class PersonController {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<Person> createPerson(@PathVariable Long id) {
+    public ResponseEntity<Person> deletePersonById(@PathVariable Long id) {
         Person person = personService.findPersonById(id);
         if (person == null) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
+        personService.deletePersonById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
-
 }
