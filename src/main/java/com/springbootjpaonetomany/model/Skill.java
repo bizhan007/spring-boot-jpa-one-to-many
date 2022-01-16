@@ -1,5 +1,6 @@
 package com.springbootjpaonetomany.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -20,8 +21,9 @@ public class Skill {
     @Column(name = "name")
     private String name;
 
-    @ManyToOne(optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "persons_id")
+    @JsonIgnore
     private Person person;
 
     @CreatedDate

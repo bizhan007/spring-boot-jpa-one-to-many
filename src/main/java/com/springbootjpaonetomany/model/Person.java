@@ -22,9 +22,10 @@ public class Person {
     @Column(name = "name")
     private String name;
 
-//    @OneToMany(mappedBy = "person", fetch = FetchType.LAZY,
-//            cascade = CascadeType.ALL)
-//    private List<Skill> skills;
+    @OneToMany(mappedBy = "person",
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
+    private List<Skill> skills;
 
     @CreatedDate
     private Date created;
