@@ -1,6 +1,5 @@
 package com.springbootjpaonetomany.model;
 
-import jdk.jfr.Timespan;
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
